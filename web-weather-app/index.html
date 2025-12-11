@@ -13,6 +13,9 @@
 <body>
     <main class="all">
         <div class="container">
+            <div class="div-error1">
+                <span class="show-error"></span>
+            </div>
             <!-- <div class="title">
                 <h1 id="h-1">
                     Weather App
@@ -22,6 +25,7 @@
                 </h2>
             </div> -->
             <header class="input-container">
+                
                 <input class="city-input" placeholder="Search">
                 <button class="search-btn">
                     <span class="material-symbols-outlined">
@@ -40,25 +44,15 @@
                     <h4 class="city-txt">Beni Mellal</h4>
                     <h4 class="date-txt">Wed, 10 december</h4>
                 </div>
-            </div>`
-
-            <div class="weather-status">
-                <img class="weather-status-img" src="assets/weather/clear.svg" alt="weather Image">
-                <div class="weather-info">
-                    <h1 class="temp-txt">36 °C</h1>
-                    <h3 class="condition-txt">Sunny</h3>
-                </div>
             </div>
-
             <div class="wind-humidty-contaner">
                 <div class="condition-item">
                     <span class="material-symbols-outlined">
                         water_drop
                     </span>
                     <div class="condition-info">
-
                         <h5 class="condition-txt">Humidity</h5>
-                        <h5 class="humdy-value">30%</h5>
+                        <h5 class="humidty-value">30%</h5>
                     </div>
                 </div>
 
@@ -69,11 +63,18 @@
                     <div class="condition-info">
 
                         <h5 class="condition-txt">Wind Speed</h5>
-                        <h5 class="humdy-value">10 Km/h</h5>
+                        <h5 class="wind-value">10 Km/h</h5>
                     </div>
                 </div>
             </div>
-
+            <div class="weather-status">
+                <img class="weather-status-img" src="assets/weather/clear.svg" alt="weather Image">
+                <div class="weather-info">
+                    <h1 class="temp-txt">36 °C</h1>
+                    <h3 class="condition-txt">Sunny</h3>
+                </div>
+                
+            </div>
             <div class="days-container">
                 <div class="forcast-item">
                     <h5 class="week-day">10 Dec</h5>
@@ -107,30 +108,11 @@
                     <img src="assets/weather/thunderstorm.svg" class="week-item-img">
                     <h5 class="day-temp">26 °C</h5>
                 </div>
-                <div class="forcast-item">
-                    <h5 class="week-day">10 Dec</h5>
-                    <img src="assets/weather/thunderstorm.svg" class="week-item-img">
-                    <h5 class="day-temp">26 °C</h5>
-                </div>
-                <div class="forcast-item">
-                    <h5 class="week-day">10 Dec</h5>
-                    <img src="assets/weather/thunderstorm.svg" class="week-item-img">
-                    <h5 class="day-temp">26 °C</h5>
-                </div>
-                <div class="forcast-item">
-                    <h5 class="week-day">10 Dec</h5>
-                    <img src="assets/weather/thunderstorm.svg" class="week-item-img">
-                    <h5 class="day-temp">26 °C</h5>
-                </div>
-               <div class="forcast-item">
-                    <h5 class="week-day">10 Dec</h5>
-                    <img src="assets/weather/thunderstorm.svg" class="week-item-img">
-                    <h5 class="day-temp">26 °C</h5>
-                </div>
             </div>
 
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

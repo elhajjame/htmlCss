@@ -111,11 +111,21 @@ body::before {
 
 .location {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+}
+.date-txt{
+    position: fixed;
+    left: 82dvh;
+    font-size: 18px;
+}
+
+.location span {
+    font-size: 25px;
 }
 
 .city-txt {
-    margin-right: 67dvh;
+    margin: 0;
+    padding-left: 8px;  ~
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -126,6 +136,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     margin: 10px;
+    flex-direction: column;
 }
 .temp-txt{
     font-size: 50px;
@@ -138,7 +149,7 @@ body::before {
     font-size: 30px;
     font-weight: 100;
 }
-.wind-humidty-contaner{
+/* .wind-humidty-contaner{
     display: flex;
     justify-content: space-between;
 
@@ -151,28 +162,13 @@ gap: 10px;
 
 .item span{
     font-size: 40px;
-}
+} */
 .days-container {
     display: flex;
     gap: 10px;
-    overflow-x: scroll;
-    padding-bottom: 10px;
+    justify-content: space-evenly;
 }
 
-.days-container ::-webkit-scrollbar{
-    width: 8px;
-}
-.days-container ::-webkit-scrollbar-track{
-    background: rgb(0, 0, 0,0.1);
-    border-radius: 10px;
-}
-.days-container::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-}
-.days-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.6);
-}
 .forcast-item{
     background: rgb(255, 255, 255, 0.1);
     min-width: 70px;
@@ -182,8 +178,52 @@ gap: 10px;
     align-items: center;
     padding: 10px;
     border-radius: 12px;
+    width: 13dvh;
+    font-size: 20px;
 }
 .week-item-img{
     width: 70px;
     height: 70px;
+}
+
+.div-error1{
+    padding: 10px;
+    text-align: center;
+    width: 40vh;
+    background: #c03c3c;
+    border-radius: 12px;
+    display: flex;
+    margin: 0 auto;
+    position: fixed;
+    top: 10px;
+    left: 90dvh;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.wind-humidty-contaner {
+      position: absolute;
+    top: 134px;       
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    padding: 0 40px;
+}
+
+.condition-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.condition-item span {
+    font-size: 32px;
+}
+
+.condition-info h5 {
+    font-size: 28px;
+    font-weight: 400;
 }
