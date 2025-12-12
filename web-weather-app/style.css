@@ -18,6 +18,10 @@ body {
 
 }
 
+.body.dark-mode {
+    background: url(images/darkmodebackgroun.jpg);
+}
+
 body::before {
     content: "";
     position: absolute;
@@ -35,7 +39,7 @@ body::before {
 
 .weather-container {
     width: 100dvh;
-    height: 60dvh;
+    height: 62dvh;
     z-index: 1;
     border-radius: 12px;
     backdrop-filter: blur(50px);
@@ -44,10 +48,10 @@ body::before {
             rgba(0, 0, 0, 0.15),
             rgba(255, 255, 255, 0.15));
 
-        display: flex;
+    display: flex;
     flex-direction: column;
     gap: 1%;
-        
+
 }
 
 .city-input {
@@ -113,7 +117,8 @@ body::before {
     display: flex;
     align-items: center;
 }
-.date-txt{
+
+.date-txt {
     position: fixed;
     left: 82dvh;
     font-size: 18px;
@@ -125,38 +130,43 @@ body::before {
 
 .city-txt {
     margin: 0;
-    padding-left: 8px; 
+    padding-left: 8px;
     display: flex;
     align-items: center;
     font-size: 18px;
 }
 
-.weather-status{
+.weather-status {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10px;
     flex-direction: column;
 }
-.temp-txt{
+
+.temp-txt {
     font-size: 50px;
     position: fixed;
-    bottom: 240px;
+    bottom: 256px;
 }
-.weather-status-img{
+
+.weather-status-img {
     width: 150px;
     height: 150px;
 }
-.condition-txt{
+
+.condition-txt {
     font-size: 30px;
     font-weight: 100;
 }
-.condition-txxt{
-  font-size: 30px;
+
+.condition-txxt {
+    font-size: 30px;
     font-weight: 100;
     margin-bottom: 26px;
     margin-top: 15px
 }
+
 /* .wind-humidty-contaner{
     display: flex;
     justify-content: space-between;
@@ -177,7 +187,7 @@ gap: 10px;
     justify-content: space-evenly;
 }
 
-.forcast-item{
+.forcast-item {
     background: rgb(255, 255, 255, 0.1);
     min-width: 70px;
     display: flex;
@@ -189,12 +199,13 @@ gap: 10px;
     width: 13dvh;
     font-size: 20px;
 }
-.week-item-img{
+
+.week-item-img {
     width: 70px;
     height: 70px;
 }
 
-.div-error1{
+.div-error1 {
     padding: 10px;
     text-align: center;
     width: 40vh;
@@ -207,19 +218,46 @@ gap: 10px;
     left: 90dvh;
     display: none;
 }
-
-.show{
+.dark-mode button{
+    background: none;
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+}
+.dark-mode {
+    /* padding: 10px; */
+    /* text-align: center; */
+    /* width: 40vh; */
+    /* background: #c03c3c;
+    /* border-radius: 12px; */
+    /* display: flex; */
+    /* margin: 0 auto; */
+    /* 
+    
+    bottom: 93dvh;
+    left: 2dvh;  */
+}
+.show {
     display: block;
 }
 
 .wind-humidty-contaner {
-      position: absolute;
-    top: 134px;       
+    position: absolute;
+    top: 134px;
     width: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 0 40px;
 }
+
 
 .condition-item {
     display: flex;
