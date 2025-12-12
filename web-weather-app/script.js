@@ -10,16 +10,19 @@ const tempTxt = document.querySelector('.temp-txt');
 const windValue = document.querySelector('.wind-value');
 const humidityValue = document.querySelector('.humidty-value');
 const dataTxt = document.querySelector('.date-txt');
+const weatherStatus = document.querySelector('.condition-txxt');
+
 const date = new Date();
 const weatherConditionIMG = document.querySelector('.weather-status-img');
-
 async function fetchData(city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('Could not fetch data');
         const data = await response.json();
+        console.log(data.weather[0].main);
 
+        weatherStatus.textContent = data.weather[0].main;
         cityTxt.textContent = data.name;
         tempTxt.textContent = Math.round(data.main.temp) + "°C";
         // weatherConditions.textContent = data.weather[0].main;
@@ -38,9 +41,10 @@ weatherConditionIMG.src = `assets/weather/${icon}`
 
 function getIcon(condition) {
     condition = condition.toLowerCase();
-    if(condition === 'snow') return 'snow.svg';
+    if(condition === 'snow') return 'snowy.svg';
+    if(condition === 'rain') return 'rainy.svg';
     if(condition === 'clear') return 'clear.svg';
-    if(condition === 'clouds') return 'clouds.svg';
+    if(condition === 'clouds') return 'cloudy.svg';
     if(condition === 'drizzle') return 'drizzle.svg';
     if(condition === 'thunderstorm') return 'thunderstorm.svg';
     if(condition === 'atmosphere') return 'atmosphere.svg';
@@ -54,6 +58,7 @@ function getIcon(condition) {
     ) return "atmosphere.svg"
 
      return "default.svg";
+
 }
 
 searchBtn.addEventListener("click", () => {

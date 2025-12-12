@@ -125,7 +125,7 @@ body::before {
 
 .city-txt {
     margin: 0;
-    padding-left: 8px;  ~
+    padding-left: 8px; 
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -140,6 +140,8 @@ body::before {
 }
 .temp-txt{
     font-size: 50px;
+    position: fixed;
+    bottom: 240px;
 }
 .weather-status-img{
     width: 150px;
@@ -148,6 +150,12 @@ body::before {
 .condition-txt{
     font-size: 30px;
     font-weight: 100;
+}
+.condition-txxt{
+  font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 26px;
+    margin-top: 15px
 }
 /* .wind-humidty-contaner{
     display: flex;
